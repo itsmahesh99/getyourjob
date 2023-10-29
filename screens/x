@@ -1,0 +1,112 @@
+import React, { useState } from 'react';
+import {StyleSheet, View, Pressable, Image, TextInput, Text} from "react-native";
+
+const Group = () => {
+  	const [rectangleTextInput, setRectangleTextInput] = useState("Where are you going.?");
+  	
+  	return (
+    		<View style={styles.rectangleParent}>
+      			<View style={[styles.groupChild, styles.lineIconPosition]} />
+      			<Image style={styles.groupItem} Profile="gotoprofile" resizeMode="cover" source="Ellipse 2.png" />
+      			<View style={[styles.rectangleGroup, styles.groupLayout]}>
+        				<TextInput style={[styles.groupInner, styles.groupLayout]} value={rectangleTextInput} onChangeText={setRectangleTextInput} placeholder="Enter the location or Pincode" multiline={false} />
+        				<Text style={styles.whereAreYou1}>Where are you going...</Text>
+        				<Image style={[styles.iconamoonsearchBold1, styles.iconamoonsearchBold1Position]} resizeMode="cover" source="iconamoon:search-bold.png" />
+      			</View>
+      			<Image style={[styles.mingcutesettings6LineIcon1, styles.iconamoonsearchBold1Position]} settings="slidethesettings" resizeMode="cover" source="mingcute:settings-6-line.png" />
+      			<Image style={[styles.lineIcon, styles.lineIconPosition]} resizeMode="cover" source="Line 9.png" />
+    		</View>);
+};
+
+const styles = StyleSheet.create({
+  	lineIconPosition: {
+    		width: 430,
+    		left: 0,
+    		position: "absolute"
+  	},
+  	groupLayout: {
+    		width: 235,
+    		height: 35,
+    		position: "absolute"
+  	},
+  	iconamoonsearchBold1Position: {
+    		overflow: "hidden",
+    		position: "absolute"
+  	},
+  	groupChild: {
+    		backgroundColor: "#0062d6",
+    		top: 0,
+    		width: 430,
+    		height: 135
+  	},
+  	groupItem: {
+    		top: 35,
+    		left: 342,
+    		width: 45,
+    		height: 46,
+    		position: "absolute"
+  	},
+  	groupInner: {
+    		borderRadius: 22,
+    		backgroundColor: "#fff",
+    		shadowColor: "rgba(0, 0, 0, 0.25)",
+    		shadowRadius: 0,
+    		elevation: 0,
+    		height: 35,
+    		left: 0,
+    		width: 235,
+    		top: 0,
+    		shadowOpacity: 1,
+    		shadowOffset: {
+      			width: 0,
+      			height: 2
+    		}
+  	},
+  	whereAreYou1: {
+    		top: 11,
+    		left: 33,
+    		fontSize: 10,
+    		fontFamily: "Inter-Regular",
+    		color: "#2a2a2a",
+    		textAlign: "left",
+    		width: 120,
+    		height: 17,
+    		position: "absolute"
+  	},
+  	iconamoonsearchBold1: {
+    		top: 8,
+    		left: 8,
+    		width: 20,
+    		height: 21
+  	},
+  	rectangleGroup: {
+    		top: 42,
+    		left: 88,
+    		height: 35
+  	},
+  	mingcutesettings6LineIcon1: {
+    		top: 44,
+    		left: 25,
+    		width: 33,
+    		height: 35
+  	},
+  	lineIcon: {
+    		top: 83,
+    		height: 2
+  	},
+  	rectangleParent: {
+    		shadowColor: "rgba(0, 0, 0, 0.5)",
+    		shadowRadius: 4,
+    		elevation: 4,
+    		flex: 1,
+    		width: "100%",
+    		height: 135,
+    		shadowOpacity: 1,
+    		shadowOffset: {
+      			width: 0,
+      			height: 2
+    		}
+  	}
+});
+
+export default Group;
